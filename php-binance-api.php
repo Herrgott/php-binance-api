@@ -810,6 +810,7 @@ class API
     /**
      * httpRequest curl wrapper for all http api requests.
      * You can't call this function directly, use the helper functions
+     * lol, shto?
      *
      * @see buy()
      * @see sell()
@@ -823,7 +824,7 @@ class API
      * @return array containing the response
      * @throws \Exception
      */
-    private function httpRequest(string $url, string $method = "GET", array $params = [], bool $signed = false)
+    public function httpRequest(string $url, string $method = "GET", array $params = [], bool $signed = false)
     {
         if (function_exists('curl_init') === false) {
             throw new \Exception("Sorry cURL is not installed!");
